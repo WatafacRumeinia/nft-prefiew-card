@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --soft-blue:hsl(215, 51%, 70%);
+    --cyan:hsl(178, 100%, 50%);
+    --very-dark-blue-mainBG:hsl(217, 54%, 11%);
+    --very-dark-blue-cardBG:hsl(216, 50%, 16%);
+    --very-dark-blue-Line:hsl(215, 32%, 27%);
+    --white:hsl(0, 0%, 100%);
+}
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--very-dark-blue-mainBG);
+    color: white;
+    font-weight: 300;
+
+}
+
+.container{
+    position: relative;
+    border-radius: 15px;
+    background-color: var(--very-dark-blue-cardBG);
+    margin: 2cm auto;
+    width: fit-content;
+    padding: 1cm; 
+    vertical-align: middle;
+}
+.img-container{
+    width: 3.5in;
+    height: 3.5in;
+    
+}
+
+
+#imgEquil{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+#view-wrapper{
+    position: absolute;
+    border-radius: 15px;
+    top: 1cm;
+    width: 3.5in;
+    height: 3.51in;
+    display: none;
+    
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+}
+#imgEquil:hover ~ #view-wrapper{
+    display: grid;
+    background-color: rgba(0, 128, 123, .6);
+    opacity: .7;
+    cursor: pointer;
+}
+#view-wrapper:hover{
+    display: grid;
+    background-color: var(--cyan);
+    opacity: .7;
+    cursor: pointer;
+}
+
+
+
+
+#ttl{
+    margin: .5cm 0 0 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+#ttl:hover{
+    color: var(--cyan);
+}
+
+#txt{
+    margin: .5cm 0 0 0;
+    color: var(--soft-blue);
+}
+
+
+#price{
+    display: flex;
+    justify-content: space-between;
+    margin: .5cm 0 .5cm 0;
+}
+#eth{
+    color: var(--cyan);
+    font-weight: 400;
+}
+#time{
+    
+    color: var(--soft-blue);
+    font-weight: 400;
+    
+
+}
+
+#author{
+    margin: 0.5cm 0 0 0;
+    display: flex;
+    gap: .5cm;
+    color: var(--soft-blue);
+}
+#author span{
+    color: white;
+    cursor: pointer;
+}
+#author span:hover{
+    color: var(--cyan);
+}
+#author img{
+    border: 1px solid white;
+    border-radius: 50%;
+}
+#author p{
+    margin-top: .3cm;
+}
+
+#line{
+    height: 1px;
+    width: 100%;
+    background-color: var(--white);
+}
+
+@media only screen and (min-width:600px){
+    .container{
+        margin: 1in auto;
+    }
+}
